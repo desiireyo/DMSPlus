@@ -1,0 +1,357 @@
+﻿
+<!-- !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" -->
+<html>
+
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <title>บริษัท โตโยต้าชุมพร ผู้จำหน่ายโตโยต้า จำกัด</title>
+    <meta name="keywords" content="บริษัท โตโยต้าชุมพร ผู้จำหน่ายโตโยต้า จำกัด" />
+    <meta name="description" content="บริษัท โตโยต้าชุมพร ผู้จำหน่ายโตโยต้า จำกัด">
+    <meta name="author" content="SCIM">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel='stylesheet' type='text/css' href='css/fonts-googleapis.css'>
+    <link rel='stylesheet' type='text/css' href='css/assets/fonts/glyphicons-pro/glyphicons-pro.css'>
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="css/assets/skin/default_skin/css/theme.css">
+
+    <!-- Stateface CSS(font) -->
+    <link rel="stylesheet" type="text/css" href="css/assets/fonts/stateface/stateface.css">
+
+    <!-- Admin Forms CSS -->
+    <link rel="stylesheet" type="text/css" href="css/assets/admin-tools/admin-forms/css/admin-forms.css">
+
+    <!-- jqwidgets -->
+    <link rel="stylesheet" type="text/css" href="js/jqwidgets/styles/jqx.base.css">
+    <link rel="stylesheet" type="text/css" href="js/jqwidgets/styles/jqx.bootstrap.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="css/assets/img/favicon.ico">
+    <script type="text/javascript" src="js/base64.js"></script>
+    <script type="text/javascript" src="js/json2.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="widgets-data-page" data-spy="scroll" data-target="#nav-spy" data-offset="300">
+    <!-- Start: Search -->
+    <div id="search">
+        <div id="searchHeader">
+            <span id="captureContainer" style="float: left">ค้นหาข้อมูล...</span>
+        </div>
+        <div id="searchContent" style="overflow: hidden">
+            <div style="margin: 10px">
+                ข้อความค้นหา
+                <input type="text" id="searchInput" onkeyup="keyPressed(event)" />
+                <input type="button" value="ค้นหา" id="searchButton" />
+                <input type="button" value="ตกลง" id="okButton" />
+                <input type="button" value="ยกเลิก" id="cancelButton" />
+                <div id="panel1" style="margin-top: 10px;">
+                    <div id="result">
+                        <div id="tbSearch"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" id="returnvalue" value="">
+    </div>
+    <!-- End: Search -->
+
+    <!-- Start: Main -->
+    <div id="main">
+        <!-- Start: Header -->
+        <header class="navbar navbar-fixed-top">
+
+            <div class="navbar-branding">
+                <a class="navbar-brand" href="dashboard.html">
+                    <img class="" src="images/LOGO_DMSPlus.jpg" width="150" alt="some"> </a>
+                <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+            </div>
+
+            <div class="navbar-left">
+                <p style="font-size: 18px; color: #30363e; margin-left: 0px; margin-top: 5px; margin-bottom: 2px;">ระบบบริหารงานขายรถยนต์</p>
+                <p style="font-size: 14px; color: #30363e; margin-left: 0px; margin-bottom: 0px;">บริษัท โตโยต้าชุมพร ผู้จำหน่ายโตโยต้า จำกัด</p>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="request-fullscreen toggle-active" href="#">
+                        <span class="ad ad-screen-full fs18"></span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown">
+                    นายทดสอบ ระบบ
+                    <span class="caret caret-tp hidden-xs"></span>
+                </a>
+                    <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
+                        <li class="dropdown-header clearfix">
+                            <div class="pull-left ml10">
+                                <select id="user-status">
+                                    <optgroup label="Current Status:">
+                                        <option value="1-1">Away</option>
+                                        <option value="1-2">Offline</option>
+                                        <option value="1-3" selected="selected">Online</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <div class="pull-right mr10">
+                                <select id="user-role">
+                                    <optgroup label="Logged in As:">
+                                        <option value="1-1">Client</option>
+                                        <option value="1-2">Editor</option>
+                                        <option value="1-3" selected="selected">Admin</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="animated animated-short fadeInUp">
+                                <span class="fa fa-envelope"></span> Messages
+                                <span class="label label-warning">2</span>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="animated animated-short fadeInUp">
+                                <span class="fa fa-user"></span> Friends
+                                <span class="label label-warning">6</span>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="animated animated-short fadeInUp">
+                                <span class="fa fa-gear"></span> Account Settings </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="animated animated-short fadeInUp">
+                                <span class="fa fa-bell"></span> Activity </a>
+                        </li>
+                        <li class="dropdown-footer">
+                            <a href="#" class="">
+                                <span class="fa fa-power-off pr5"></span> Logout </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </header>
+        <!-- End: Header -->
+
+        <!-- Start: Sidebar -->
+        <aside id="sidebar_left" class="nano nano-primary affix has-scrollbar sidebar-default">
+            <!-- Start: Sidebar Left Content -->
+            <div class="sidebar-left-content nano-content" tabindex="0" style="margin-right: -17px;">
+                <!-- Start: Sidebar Header -->
+                <header class="sidebar-header">
+                    <!-- Sidebar Widget - Author  -->
+                    <div class="sidebar-widget author-widget">
+                        <div class="media">
+                            <a class="media-left" href="#">
+                                <img class="img-responsive" src="images/avatars/1.jpg" alt="avatars"> </a>
+                            <div class="media-body">
+                                <div class="media-links">
+                                    <div class="sidebar-menu-toggle">Admin</div>
+                                </div>
+                                <div class="media-author">นายทดสอบ ระบบ</div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- End: Sidebar Header -->
+
+                <!-- Start: Sidebar Left Menu -->
+                <div id="leftMenu">
+
+                </div>
+                <!-- End: Sidebar Menu -->
+            </div>
+            <!-- End: Sidebar Left Content -->
+
+        </aside>
+        <!-- End: Sidebar Left -->
+
+        <!-- Start: Content-Wrapper -->
+        <section id="content_wrapper">
+
+            <!-- Start: Topbar-Dropdown -->
+            <div id="topbar-dropmenu">
+                <div class="topbar-menu row">
+                    <div class="col-xs-4 col-sm-2">
+                        <a href="#" class="metro-tile">
+                            <span class="glyphicon glyphicon-inbox"></span>
+                            <span class="metro-title">Messages</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                        <a href="#" class="metro-tile">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span class="metro-title">Users</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                        <a href="#" class="metro-tile">
+                            <span class="glyphicon glyphicon-headphones"></span>
+                            <span class="metro-title">Support</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                        <a href="#" class="metro-tile">
+                            <span class="fa fa-gears"></span>
+                            <span class="metro-title">Settings</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                        <a href="#" class="metro-tile">
+                            <span class="glyphicon glyphicon-facetime-video"></span>
+                            <span class="metro-title">Videos</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                        <a href="#" class="metro-tile">
+                            <span class="glyphicon glyphicon-picture"></span>
+                            <span class="metro-title">Pictures</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- End: Topbar-Dropdown -->
+
+            <!-- Start: Topbar -->
+            <!-- <header id="topbar">
+                <div class="topbar-left text-primary" style="font-size : 16px; padding-top : 3px;">
+                    หน้าหลัก </div>
+            </header> -->
+            <!-- End: Topbar -->
+
+            <!-- Begin: Content -->
+            <section id="content" class="table-layout animated fadeIn">
+                <!-- begin: .tray-center -->
+                <div class="tray tray-center" id="panelContent">
+
+                </div>
+            </section>
+            <!-- End: Content -->
+
+            <!-- Start: Bottombar -->
+            <footer id="content-footer" class="affix">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span class="footer-legal">Copyright © 2016 <b>SCIM</b> BECAUSE WE CAN</span>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <a href="#content" class="footer-return-top">
+                        <span class="fa fa-arrow-up"></span>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+            <!-- End: Bottombar -->
+        </section>
+        <!-- End: Content-Wrapper -->
+    </div>
+    <!-- End: Main -->
+
+    <!-- BEGIN: PAGE SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="js/vendor/jquery/jquery-1.11.1.min.js"></script>
+    <script src="js/vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+    <!-- HighCharts Plugin -->
+    <script src="js/vendor/plugins/highcharts/highcharts.js"></script>
+
+    <!-- Sparklines Plugin -->
+    <script src="js/vendor/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Simple Circles Plugin -->
+    <script src="js/vendor/plugins/circles/circles.js"></script>
+
+    <!-- JvectorMap Plugin + US Map (more maps in plugin/assets folder) -->
+    <script src="js/vendor/plugins/jvectormap/jquery.jvectormap.min.js"></script>
+    <script src="js/vendor/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js"></script>
+
+    <!-- Theme Javascript -->
+    <script src="css/assets/js/utility/utility.js"></script>
+    <script src="css/assets/js/demo/demo.js"></script>
+    <script src="css/assets/js/main.js"></script>
+
+    <!-- jqwidgets -->
+    <script src="js/jqwidgets/jqxcore.js"></script>
+    <script src="js/jqwidgets/jqx-all.js"></script>
+
+    <!-- Widget Javascript -->
+    <script src="css/assets/js/demo/widgets.js"></script>
+    <script src="js/mainmenu.js"></script>
+    <script src="js/search.js"></script>
+    <script type="text/javascript">
+        var xlocat = '';
+        //Load Menu
+        loadMenu();
+
+        function keyPressed(e) {
+            if(e.keyCode==13) {
+                //alert('keyPressed');
+                $("#searchButton").click();
+            }
+        }
+
+        $(document).ready(function() {
+            "use strict";
+
+            // Init Theme Core
+            Core.init();
+
+            // Init Demo JS
+            Demo.init();
+
+            // Init jqxTheme
+            $.jqx.theme = "bootstrap";
+            var width = $(document).width();
+            var height = $(document).height();
+
+            //ค้นหา
+            $('#search').jqxWindow({
+                width: width-5,
+                height: height-10,
+                maxWidth: width,
+                maxHeight: height,
+                resizable: false,
+                isModal: true,
+                autoOpen: false,
+                showCollapseButton: true,
+                cancelButton: $('#cancelButton'),
+                initContent: function () {
+                    $('#search').jqxWindow('focus');
+                    $("#searchInput").jqxInput({ height: 23, width: width-400 });
+                    $('#searchButton').jqxButton({ width: '80px'});
+                    $('#okButton').jqxButton({ width: '80px', template: "success" });
+                    $('#cancelButton').jqxButton({ width: '80px', template: "danger" });
+                }
+            });
+
+            $('#search').on('open', function (event) {
+                $('#searchInput').jqxInput('focus');
+            });
+
+            $('#search').on('close', function (event) {
+                $("#searchInput").val('');
+            });
+
+            function loadHTML(filename) {
+                $("#panelContent").load(filename);
+            }
+            //On Click Menu
+            $("#STK06").click(function() {
+                loadHTML("stk_onhand");
+            });
+        });
+    </script>
+    <!-- END: PAGE SCRIPTS -->
+</body>
+</html>
