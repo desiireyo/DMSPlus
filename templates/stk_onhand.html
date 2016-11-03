@@ -342,6 +342,7 @@
         });
         // On Click
         $("#btnQuery").click(function() {
+            $('#gridStock').jqxGrid('showloadelement');
             var txtCurrent = "";
             if ($("#currentcode").val() === '1') {
                 txtCurrent = " AND (A.CURSTAT ='' OR A.CURSTAT='R' OR A.CURSTAT IS NULL ) ";
@@ -355,6 +356,7 @@
             };
             var dataStock = new $.jqx.dataAdapter(sourceStock);
             $("#gridStock").jqxGrid({source: dataStock});
+            $('#gridStock').jqxGrid('hideloadelement');
         });
         // Search
         $("#searchInvlocat").off().on('click', function() {
@@ -377,7 +379,11 @@
         });
         $("#searchInvparking").off().on('click', function() {
             xlocat = $('#locatcd').val();
-            searchAll('invparking', 'parkcode');
+            if (xlocat === "") {
+                ShowMessage("กรุณาระบุรหัสสาขาก่อน!", "info");
+            } else {
+                searchAll('invparking', 'parkcode');
+            }
         });
     });
 </script>
